@@ -23,17 +23,23 @@ import PageNotFound from "./pages/PageNotFound";
 
 ReactDOM.render(
     <Router>
-        <Nav />
         <Routes>
-            <Route path="/" element={<About />} exact={true}/>
-            <Route path="/games" element={<Games />} exact={true}/>
-            <Route path="/careers" element={<Careers />} exact={true}/>
-            <Route path="/forums" element={<Forums />} exact={true}/>
-            <Route path="/contact" element={<Contact />} exact={true}/>
+            <Route path="/" element={pageDisplay(<About />)} exact={true}/>
+            <Route path="/games" element={pageDisplay(<Games />)} exact={true}/>
+            <Route path="/careers" element={pageDisplay(<Careers />)} exact={true}/>
+            <Route path="/forums" element={pageDisplay(<Forums />)} exact={true}/>
+            <Route path="/contact" element={pageDisplay(<Contact />)} exact={true}/>
             {/* 404 route */}
             <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <Footer />
     </Router>,
     document.getElementById('root')
 );
+
+function pageDisplay(page) {
+    return <div>
+        <Nav />
+        {page}
+        <Footer />
+    </div>
+}
