@@ -6,6 +6,20 @@
       <sourceFolder url="file://$MODULE_DIR$/Web-App/tests" isTestSource="true" packagePrefix="App\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/mongodb-odm" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/mongodb-odm-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/persistence" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/mongodb/mongodb" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/symfony/doctrine-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/jean85/pretty-package-versions" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/friendsofphp/proxy-manager-lts" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/laminas/laminas-code" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
