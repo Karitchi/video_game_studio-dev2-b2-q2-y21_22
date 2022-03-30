@@ -18,6 +18,7 @@ import Games from "./pages/Games"
 import Careers from "./pages/Careers"
 import Forums from "./pages/Forums"
 import Contact from "./pages/Contact"
+import Image from './components/Image.js';
 
 import PageNotFound from "./pages/PageNotFound";
 
@@ -39,6 +40,7 @@ ReactDOM.render(
 function pageDisplay(page) {
     return <div>
         <Nav />
+        <Image/>
         {page}
         <Footer />
     </div>
