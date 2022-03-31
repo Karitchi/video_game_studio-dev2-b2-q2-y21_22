@@ -1,30 +1,25 @@
 import React from 'react';
-import Carousel from 'react-elastic-carousel';
-import Card from "./Card";
+import 'bootstrap/dist/css/bootstrap.css';
+import Carousel from 'react-bootstrap/Carousel';
+import Card from './Card';
+import './style/Caroussel.css'
+
+function Carousel_career(){
 
 
-function Caroussel() {
-
-    const breakPoints = [
-        {width: 1, itemsToShow: 1},
-        {width: 500, itemsToShow: 2},
-        {width: 1000, itemsToShow: 3},
-        {width: 1500, itemsToShow: 4},
-        {width: 2000, itemsToShow: 5}
-
-    ]
-
-    return (
-        <div>
-            <h1>Current job Openings:</h1>
-            <Carousel breakPoints={breakPoints}>
-                <Card title="Job Title 1" location="Brussels" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales."/>
-                <Card title="Job Title 2" location="Brussels" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales."/>
-                <Card title="Job Title 3" location="Brussels" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales."/>
-                <Card title="Job Title 4" location="Brussels" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales."/>
+    return(
+        <div className="carousel_career">
+            <h1>Current Job Openings:</h1>
+            <Carousel>
+                <Carousel.Item>
+                    <Card title="Job Title 1" location="Brussels" skills="Only the best" job="Serving cofee" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales."/>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <Card title="Job Title 2" location="Brussels" skills="Only the best" job="Serving cofee" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales."/>
+                </Carousel.Item>
             </Carousel>
         </div>
-    );
+    )
 }
 
-export default Caroussel
+export default Carousel_career

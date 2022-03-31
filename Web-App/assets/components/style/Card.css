@@ -4,5 +4,13 @@
     background: #333;
     color: #fff;
     font-size: 13px;
-    margin: 0 20px;
+    margin: 20px 0 20px 0;
+}
+.content_card{
+    margin: 0 100px 0 100px;
+    vertical-align: middle;
+}
+
+.content_card h1{
+    margin: 10px 0 0 0;
 }
