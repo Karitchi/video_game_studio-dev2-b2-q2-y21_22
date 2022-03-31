@@ -18,7 +18,7 @@ function Card(props) {
                 <div>{props.description}</div>
             </div>
 
-            <div onClick={e => e.stopPropagation()}>
+            <div className='modal' onClick={e => e.stopPropagation()}>
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>Current Job Opening:</Modal.Title>
@@ -26,12 +26,13 @@ function Card(props) {
                     <Modal.Body>
                         <h2>{props.title}</h2>
                         <h3>Location: {props.location}</h3>
-                        <h3>Description</h3>
+                        <h3>Description:</h3>
                         <div>{props.description}</div>
                         <h3>Skills and Experiences:</h3>
                         <div>{props.skills}</div>
                         <h3>What You'll Be Doing:</h3>
                         <div>{props.job}</div>
+                        <div className='contact'>{props.contact}</div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>

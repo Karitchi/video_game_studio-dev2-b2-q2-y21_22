@@ -12,10 +12,10 @@ function Carousel_career(){
             <h1>Current Job Openings:</h1>
             <Carousel>
                 <Carousel.Item>
-                    <Card title="Job Title 1" location="Brussels" skills="Only the best" job="Serving cofee" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales."/>
+                    <Card title="Job Title 1" location="Brussels" skills="Only the best" job="Serving cofee" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales." contact='Contact us here!'/>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <Card title="Job Title 2" location="Brussels" skills="Only the best" job="Serving cofee" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales."/>
+                    <Card title="Job Title 2" location="Brussels" skills="Only the best" job="Serving cofee" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales." contact='Contact us here!'/>
                 </Carousel.Item>
             </Carousel>
         </div>

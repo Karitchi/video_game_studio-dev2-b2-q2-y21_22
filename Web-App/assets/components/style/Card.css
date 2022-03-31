@@ -5,6 +5,15 @@
     color: #fff;
     font-size: 13px;
     margin: 20px 0 20px 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.card:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 .content_card{
     margin: 0 100px 0 100px;
@@ -13,4 +22,18 @@
 
 .content_card h1{
     margin: 10px 0 0 0;
+}
+
+.modal h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.modal h3{
+    font-size: 20px;
+    margin: 10px 0 0 0;
+}
+
+.contact{
+    margin: 20px 0 0 0;
 }
