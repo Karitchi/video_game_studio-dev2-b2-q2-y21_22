@@ -1,11 +1,13 @@
 footer{
     background-color: rgb(36, 36, 36);
     width: 60%;
-    height: 120px;
+    height: 90px;
     padding: 0 20%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    font-size: 14px;
 }
 footer ul{
     display: flex;
@@ -26,4 +28,10 @@ footer .logo{
 }
 footer p{
     color: white;
+}
+.social_media_icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    background-color: yellow;
 }

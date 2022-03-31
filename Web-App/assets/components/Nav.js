@@ -2,8 +2,10 @@ import React from 'react'
 import logo from './img/logo.png'
 import style from './style/Nav.css'
 import {Link} from 'react-router-dom';
+import {useWindowSize, useWindowWidth, useWindowHeight} from '@react-hook/window-size';
 
 const Nav = () => {
+
   return (
     <nav>
       <img className='logo'/>
@@ -27,5 +29,8 @@ const Nav = () => {
     </nav>
   )
 }
-
 export default Nav
+
+function test(){
+    console.log(useWindowWidth())
+}

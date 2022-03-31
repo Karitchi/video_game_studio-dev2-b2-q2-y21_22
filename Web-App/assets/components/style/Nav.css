@@ -6,12 +6,15 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    font-size: 16.5px;
 }
 nav ul{
     display: flex;
     flex-direction: row;
     text-decoration: none;
     list-style: none;
+    margin-top: 18px;
 }
 nav li{
     margin-left: 20px;
@@ -24,10 +27,18 @@ nav .logo{
     width: 80px;
     height: 40px;
 }
-a{
+nav a{
     color: white;
     text-decoration: none;
 }
-a:hover{
+nav a:hover{
     color: rgb(197, 197, 197);
+}
+
+@media only screen and (max-width: 850px){
+    nav ul{
+        width: 100px;
+        height: 100%;
+        flex-direction: column;
+    }
 }
