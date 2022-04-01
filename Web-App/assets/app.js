@@ -18,7 +18,6 @@ import Games from "./pages/Games"
 import Careers from "./pages/Careers"
 import Forums from "./pages/Forums"
 import Contact from "./pages/Contact"
-import Image from './components/Image.js';
 
 import PageNotFound from "./pages/PageNotFound";
 
@@ -31,7 +30,6 @@ ReactDOM.render(
             <Route path="/forums" element={pageDisplay(<Forums />)} exact={true}/>
             <Route path="/contact" element={pageDisplay(<Contact />)} exact={true}/>
             {/* 404 route */}
-            <Route path="*" element={<PageNotFound />} />
         </Routes>
     </Router>,
     document.getElementById('root')
@@ -40,7 +38,6 @@ ReactDOM.render(
 function pageDisplay(page) {
     return <div>
         <Nav />
-        <Image/>
         {page}
         <Footer />
     </div>
