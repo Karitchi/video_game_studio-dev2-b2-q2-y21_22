@@ -1,0 +1,19 @@
+.games-container-description{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0;
+}
+
+.games-container-title{
+    margin: 30px 0 0 20px;
+    font-size: 20px;
+}
+
+.games-container{
+    width: calc(100% - 20px);
+    min-height: 200px;
+    margin: 10px auto ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

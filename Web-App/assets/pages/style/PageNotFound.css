@@ -32,36 +32,3 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
-@media only screen and (max-width: 1000px){
-    .errorMessageContainer p{
-        font-size: 35px;
-    }
-    .errorContainer .title{
-        font-size: 90px;
-    }
-    .errorContainer .errorCode, .errorContainer .errorDescription{
-        font-size: 40px;
-    }
-}
-@media only screen and (max-height: 700px){
-    .errorMessageContainer img{
-        width: 300px;
-    }
-    .errorMessageContainer p{
-        font-size: 23px;
-    }
-    .errorContainer .title{
-        font-size: 50px;
-    }
-    .errorContainer .errorCode, .errorContainer .errorDescription{
-        font-size: 25px;
-    }
-    .errorContainer{
-        padding: 20px 0;
-    }
-}
-@media only screen and (max-height: 500px) {
-    .errorMessageContainer img {
-        width: 250px;
-    }
-}

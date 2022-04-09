@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './style/PageNotFound.css'
-import image from '../../src/img/svg.svg'
+import image from '../../src/img/icons/error404.svg'
 import {Link} from "react-router-dom";
 
 const PageNotFound = () => {

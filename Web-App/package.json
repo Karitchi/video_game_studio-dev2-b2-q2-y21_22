@@ -21,6 +21,7 @@
     "dependencies": {
         "@react-hook/window-size": "^3.0.7",
         "axios": "^0.26.1",
+        "jquery": "^3.6.0",
         "prop-types": "^15.8.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",

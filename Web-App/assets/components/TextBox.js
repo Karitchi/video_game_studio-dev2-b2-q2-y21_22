@@ -6,7 +6,7 @@ import style from './style/TextBox.css'
 const TextBox = (props) => {
     return (
         <div className="text-box">
-            {props.arr.map((i, index) => fillContent(i.name, i.content, index))}
+            {props.textBoxContent.map((i, index) => fillContent(i.name, i.content, index))}
         </div>
     )
 }
@@ -26,6 +26,12 @@ function fillContent(name, content, index){
         case name === 'text':
             return (
                 <p className={name} key={index}> {content} </p>
+            )
+        case name === 'list':
+            return (
+                <ul className={name} key={index}>
+                    {content.map((i, inx) => <li key={inx}>{i}</li>)}
+                </ul>
             )
     }
 }

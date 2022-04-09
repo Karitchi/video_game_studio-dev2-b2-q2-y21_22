@@ -1,0 +1,106 @@
+/*nav content footer*/
+@media only screen and (max-width: 1000px) {
+    .content{
+        min-width: 300px;
+        width: 100%;
+    }
+    .nav-content{
+        width: 95%;
+        min-width: 300px;
+    }
+    .footer-content{
+        height: 160px;
+        width: 90%;
+        min-width: 250px;
+        font-size: 12px;
+    }
+    .social-media-container{
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .nav-content ul{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .nav-content{
+        min-height: 90px;
+    }
+    .nav-bar .logo{
+        width: 200px;
+        height: 70px;
+    }
+    .footer-bar{
+        min-height: 140px;
+    }
+    /*grid*/
+    .footer-content{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr 1fr;
+    }
+    .footer-bar .logo{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .footer-bar p{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/*game container - box*/
+@media screen and (max-width: 940px){
+    .game-box{
+        width: calc(50% - 20px);
+        margin: 10px 10px;
+    }
+}
+@media screen and (max-width: 640px){
+    .game-box{
+        width: calc(100% - 20px);
+        margin: 10px 10px;
+    }
+}
+@media screen and (max-width: 500px){
+    .game-box{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .games-container{
+        width: 100%;
+    }
+}
+
+/*image gallery - block*/
+@media screen and (min-width: 800px){
+    .image-gallery{
+        overflow: visible;
+        padding: 10px calc((100% / 6) * 2);
+        margin-left: calc((100% / 6) * -2);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .image-gallery{
+        padding: 10px 0;
+    }
+    .image-block{
+        width: calc(50% - 20px);
+        margin: 10px 10px;
+    }
+}
+@media screen and (max-width: 500px){
+    .image-block{
+        width: 90%;
+        margin: 10px calc(10% / 2);
+    }
+}

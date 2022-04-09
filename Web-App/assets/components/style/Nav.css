@@ -1,44 +1,76 @@
-nav{
-    background-color: rgb(36, 36, 36);
-    width: 60%;
-    height: 50px;
-    padding: 0 20%;
+.nav-bar{
+    background-color: #2e3136;
+    width: 100%;
+    min-height: 50px;
+    box-shadow: 0 0 4px 0 #000000;
+}
+.nav-content{
+    min-width: 990px;
+    width: 58%;
+    min-height: 50px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    font-size: 16.5px;
 }
-nav ul{
+.nav-bar .logo{
+    background-color: #2e3136;
+    margin-top: 10px;
+    width: auto;
+    height: 55px;
+}
+.nav-content ul{
+    line-height: 40px;
     display: flex;
     flex-direction: row;
-    text-decoration: none;
+}
+.nav-content li{
     list-style: none;
-    margin-top: 18px;
+    margin-left: 15px;
 }
-nav li{
-    margin-left: 20px;
-}
-nav .logo{
-    margin-top: 5px
-}
-.logo{
-    background-color: blue;
-    width: 80px;
-    height: 40px;
-}
-nav a{
+.nav-content a{
     color: white;
+    font-size: 17px;
     text-decoration: none;
 }
-nav a:hover{
-    color: rgb(197, 197, 197);
+.nav-content a:hover{
+    color: grey;
 }
 
-@media only screen and (max-width: 850px){
-    nav ul{
-        width: 100px;
-        height: 100%;
-        flex-direction: column;
-    }
+/*toggle menu*/
+.menu-button{
+    display: none;
+    background-color: #2e3136;
+    height: 55px;
+    width: 55px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-top: 17px;
+}
+.menu-button:hover{
+    background-color: #46494D;
+}
+.menu-button-image{
+    width: 100%;
+    height: 100%;
+}
+.toggle-menu{
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 200px;
+    display: none;
+}
+.toggle-menu-components{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+.toggle-menu-components li{
+    list-style: none;
+    text-align: center;
+    margin-top: 13px;
+}
+.toggle-menu-components a{
+    color: white;
+    text-decoration: none;
 }

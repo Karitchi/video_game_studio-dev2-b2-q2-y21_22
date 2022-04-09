@@ -1,8 +1,7 @@
 .text-box{
-    background-color: #3adb76;
-    width: 100%;
+    width: calc(100% - 30px);
     min-height: 100px;
-    margin: 0;
+    margin:  auto;
 }
 
 .title, .sub-title, .text{
@@ -12,16 +11,19 @@
 
 .title{
     font-size: 23px;
-    margin-top: 40px;
+    margin: 40px 0 20px;
     text-align: center;
 }
 
 .sub-title{
     font-size: 20px;
-    margin-top: 12px;
+    margin: 16px 0 5px 5px;
 }
 
 .text{
     font-size: 16px;
-    margin-top: 8px;
+    margin-top: 5px;
+}
+.list li{
+    line-height: 30px;
 }
