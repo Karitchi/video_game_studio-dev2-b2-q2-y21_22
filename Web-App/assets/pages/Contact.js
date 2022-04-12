@@ -1,12 +1,12 @@
 import React from 'react'
 import style from './style/PageFormat.css'
 import Form from "../components/Form";
-import Image from "../components/Image"
+import Image from '../components/Image';
 
 const Contact = () => {
     return (
         <div>
-            <Image />
+            <Image/>
             <div className='content'>
                 <Form />
             </div>
