@@ -73,7 +73,8 @@ button{
     justify-content: center;
 }
 
-@media only screen and (max-width: 1000px) {
+@media all and (min-width: 445px) and (max-width: 1000px) {
+    
     .div-container {
         width: 90%;
         grid-template-columns: 1fr;
@@ -90,6 +91,17 @@ button{
         grid-row-end: 2;
         justify-content: center;
     }
+
+    label, input, select, textarea, button, p, strong{
+        font-size: 200%;
+        min-height: 6rem;
+        resize: vertical;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 5rem;
+        
+    }
     .div-child{
         width: 90%;
         margin: 0 auto;
@@ -100,4 +112,13 @@ button{
         justify-content: center;
     }
 }
+
+@media all and (max-width: 700px){
+    .div-container{
+        width: 50%;
+        
+    }
+}
+
+
 /*end grid*/

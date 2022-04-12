@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Contact from '../components/style/Contact.css'
-import Toggle from '../components/style/Toggle.css'
+import ToggleFormat from '../components/style/ToggleFormat.css'
 
 
 const Form = () => {
