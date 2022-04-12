@@ -5,6 +5,7 @@ import Form from "../components/Form";
 const Contact = () => {
     return (
         <div>
+            
             <div className='content'>
                 <Form />
             </div>

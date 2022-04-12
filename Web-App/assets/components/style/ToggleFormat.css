@@ -2,12 +2,12 @@
     display: none;
   }
 
+
   .toggleContainer {
     width: 100%;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
     border: 1px solid #111111;
     border-radius: 0px;
     background: white;
@@ -53,3 +53,4 @@
     color: #111111;
     transition: color 0.3s;
  }
+

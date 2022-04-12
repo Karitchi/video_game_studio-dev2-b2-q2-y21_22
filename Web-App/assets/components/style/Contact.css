@@ -82,21 +82,36 @@ button{
     justify-content: center;
 }
 
+
+
 @media only screen and (max-width: 1000px) {
     .div-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         column-gap: 100px;
         row-gap: 100px;
+        
     }
     .form-container{
-        width: 90%;
+        width: 100%;
+        margin-top:0;
         margin: 0 auto;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
         justify-content: center;
+        
+    }
+    label, input, select, textarea, button{
+        font-size: 200%;
+        min-height: 6rem;
+        resize: vertical;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 5rem;
+        
     }
     .div-child{
         width: 90%;
@@ -108,4 +123,6 @@ button{
         justify-content: center;
     }
 }
+
+
 /*end grid*/
