@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Contact from '../components/style/Contact.css'
-import ToggleFormat from '../components/style/ToggleFormat.css'
+import Toggle from '../components/style/Toggle.css'
 
 
 const Form = () => {
@@ -11,7 +11,7 @@ const Form = () => {
                 <div className='div-child toggle-button'>
                     <input type='checkbox' id='toggle' className='toggleCheckbox' value='report' />
                     <label htmlFor='toggle' className='toggleContainer'>
-                        <div>Report Bug</div> 
+                        <div>Report Bug</div>
                         <div>General Form</div>
                     </label>
                 </div>
@@ -45,7 +45,7 @@ const Form = () => {
                         <button type='submit'>Submit</button>
                     </form>
                 </div>
- 
+
             </div>
             <div className='div-child media'>
                 <strong>Connect with us on Social Media</strong>
@@ -55,7 +55,7 @@ const Form = () => {
                 <p>Connect on Steam</p>
             </div>
         </div>
-        
+
     )
 }
 

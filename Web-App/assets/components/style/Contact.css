@@ -1,4 +1,3 @@
-
 .div-container{
     margin-top: 5%;
 }
@@ -50,12 +49,6 @@ button{
     }
 }
 
-@media only screen and (max-width: 500px){
-    .img_game{
-        display: none;
-    }
-}
-
 /*grid*/
 .div-container {
     display: grid;
@@ -66,7 +59,6 @@ button{
     row-gap: 100px;
 }
 .form-container{
-
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -74,7 +66,6 @@ button{
     justify-content: center;
 }
 .div-child{
-
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -82,36 +73,22 @@ button{
     justify-content: center;
 }
 
-
-
 @media only screen and (max-width: 1000px) {
     .div-container {
+        width: 90%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         column-gap: 100px;
         row-gap: 100px;
-        
     }
     .form-container{
-        width: 100%;
-        margin-top:0;
+        width: 90%;
         margin: 0 auto;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
         justify-content: center;
-        
-    }
-    label, input, select, textarea, button{
-        font-size: 200%;
-        min-height: 6rem;
-        resize: vertical;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        margin-bottom: 5rem;
-        
     }
     .div-child{
         width: 90%;
@@ -123,6 +100,4 @@ button{
         justify-content: center;
     }
 }
-
-
 /*end grid*/
