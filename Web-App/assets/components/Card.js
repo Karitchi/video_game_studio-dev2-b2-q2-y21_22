@@ -16,6 +16,7 @@ function Card(props) {
                 <h1>{props.title}</h1>
                 <div>Location : {props.location}</div>
                 <div>{props.description}</div>
+                <button className="button_card" onClick={handleShow}>More info</button>
             </div>
 
             <div className='modal' onClick={e => e.stopPropagation()}>

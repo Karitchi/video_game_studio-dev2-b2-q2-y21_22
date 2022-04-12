@@ -10,7 +10,7 @@ function Carousel_career(){
     return(
         <div className="carousel_career">
             <h1>Current Job Openings:</h1>
-            <Carousel>
+            <Carousel interval={null}>
                 <Carousel.Item>
                     <Card title="Job Title 1" location="Brussels" skills="Only the best" job="Serving cofee" description="Quisque euismod, dolor a rhoncus placerat, nunc libero ultrices tortor, quis dapibus urna tortor ut nunc. Nunc faucibus ex vel nibh feugiat, ut venenatis nisl sodales." contact='Contact us here!'/>
                 </Carousel.Item>
