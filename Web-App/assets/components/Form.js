@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import Contact from '../components/style/Contact.css'
-import Toggle from '../components/style/Toggle.css'
+import ToggleFormat from '../components/style/ToggleFormat.css'
 
 
 const Form = () => {
     return (
         <div className='div-container'>
-            <div>
+            <div className="form-container">
                 <div className='div-child toggle-button'>
-                    <input type='checkbox' id='toggle' class='toggleCheckbox' value='report' />
-                    <label for='toggle' className='toggleContainer'>
+                    <input type='checkbox' id='toggle' className='toggleCheckbox' value='report' />
+                    <label  className='toggleContainer'>
                         <div>Report Bug</div> 
                         <div>General Form</div>
                     </label>
@@ -18,27 +18,33 @@ const Form = () => {
 
                 <div className='div-child formular'>
                     <form>
-                        <label for="fname">Name</label><br></br>
-                        <input name='Name' className='name' type="text" id="fname" required='true' ></input><br></br>
-                        <label for="fmail">Email*</label><br></br>
-                        <input name='Mail' className='mail' type="email" id="fmail" required='true' ></input><br></br>
-                        <label>Game*</label><br></br>
+                        <label >Name</label>
+                        <input name='Name' className='name' type="text" id="fname" required='true'>
+
+                        </input>
+                        <label >Email*</label>
+                        <input name='Mail' className='mail' type="email" id="fmail" required='true' >
+
+                        </input>
+                        <label>Game*</label>
                         <select name='Game' className='game'>
                             <option value='game1'>Game1</option>
                             <option value='game2'>Game2</option>
                             <option value='game3'>Game3</option>
-                        </select><br></br>
-                        <label>Category*</label><br></br>
-                        <select name='Categ' className='category'><br></br>
+                        </select>
+                        <label>Category*</label>
+                        <select name='Categ' className='category'>
                             <option value='categ1'>Categ1</option>
                             <option value='categ2'>Categ2</option>
                             <option value='categ3'>Categ3</option>
-                        </select><br></br>
+                        </select>
                         <label>Description</label>
-                        <textarea name='Msg' className='description' cols='5' rows='5' placeholder='Write your message here...'></textarea>
+                        <textarea name='Msg' className='description' cols='5' rows='5' placeholder='Write your message here...'>
+
+                        </textarea>
                         <button type='submit'>Submit</button>
                     </form>
-            </div>
+                </div>
  
             </div>
             <div className='div-child media'>

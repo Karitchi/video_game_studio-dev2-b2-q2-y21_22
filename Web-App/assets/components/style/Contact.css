@@ -1,24 +1,18 @@
+
 .div-container{
-    display: grid;
     margin-top: 5%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 5fr;
-    grid-template-areas: "toggle-button" "formular media";
 }
 
 .toggle-button{
-    grid-area: "toggle-button";
     background-color: aqua;
 }
 
 .formular{
-    grid-area: "formular";
     background-color: aquamarine;
 }
 
 .media{
     background-color: blue;
-    grid-area: "media";
 }
 
 .div-child{
@@ -61,3 +55,57 @@ button{
         display: none;
     }
 }
+
+/*grid*/
+.div-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "toggle-button" "formular media";
+    column-gap: 100px;
+    row-gap: 100px;
+}
+.form-container{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: center;
+}
+.div-child{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .div-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 100px;
+        row-gap: 100px;
+    }
+    .form-container{
+        width: 90%;
+        margin: 0 auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-content: center;
+    }
+    .div-child{
+        width: 90%;
+        margin: 0 auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-content: center;
+    }
+}
+/*end grid*/
