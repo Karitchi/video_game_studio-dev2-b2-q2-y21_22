@@ -10,7 +10,7 @@ const Form = () => {
             <div className="form-container">
                 <div className='div-child toggle-button'>
                     <input type='checkbox' id='toggle' className='toggleCheckbox' value='report' />
-                    <label  className='toggleContainer'>
+                    <label for='toggle' className='toggleContainer'>
                         <div>Report Bug</div> 
                         <div>General Form</div>
                     </label>
@@ -18,11 +18,11 @@ const Form = () => {
 
                 <div className='div-child formular'>
                     <form>
-                        <label >Name</label>
-                        <input name='Name' className='name' type="text" id="fname" required='true'>
+                        <label for="fname">Name</label>
+                        <input name='Name' className='name' type="text" id="fname" required='true' >
 
                         </input>
-                        <label >Email*</label>
+                        <label for="fmail">Email*</label>
                         <input name='Mail' className='mail' type="email" id="fmail" required='true' >
 
                         </input>
