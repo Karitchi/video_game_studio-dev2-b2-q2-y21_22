@@ -6,10 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use App\Document\User;
+use Doctrine\ODM\MongoDB\DocumentManager;
+
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/{reactRouting}", name="about", requirements={"reactRouting"="^(?!admin).+"}, defaults={"reactRouting": null})
+     * @Route("/{reactRouting}", name="about", requirements={"reactRouting"="^(?!admin)+(?!test).+"}, defaults={"reactRouting": null})
      */
     public function index(): Response
     {
@@ -17,6 +20,8 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+
     /**
      * @Route("/admin", name="admin")
      */
@@ -24,4 +29,16 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/admin.html.twig');
     }
+
+    /**
+     * @Route("/test", name="test")
+     */
+    public function test(DocumentManager $dm): Response
+    {
+        $repository = $dm->getRepository(User::class);
+        $Users = $repository->findAll();
+
+        dd($Users);
+    }
+
 }
