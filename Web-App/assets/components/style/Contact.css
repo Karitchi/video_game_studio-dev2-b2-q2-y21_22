@@ -20,6 +20,11 @@
     background-color: white;
 }
 
+.img_game{
+    width: 100%;
+    height: 823px;
+
+}
 
 input, select, textarea{
     padding: 1%;
