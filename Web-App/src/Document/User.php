@@ -15,6 +15,7 @@ class User
     protected $_id;
     /**
      * @MongoDB\Field(type="string")
+     * @Ignore()
      */
     protected $email;
 

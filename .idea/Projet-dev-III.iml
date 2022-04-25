@@ -15,6 +15,9 @@
       <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/jms/serializer" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/jms/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/Web-App/vendor/phpstan/phpdoc-parser" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

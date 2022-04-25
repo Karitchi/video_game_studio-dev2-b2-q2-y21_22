@@ -54,6 +54,12 @@
     "jean85/pretty-package-versions": {
         "version": "2.0.5"
     },
+    "jms/metadata": {
+        "version": "2.6.1"
+    },
+    "jms/serializer": {
+        "version": "3.17.1"
+    },
     "laminas/laminas-code": {
         "version": "4.5.1"
     },
@@ -62,6 +68,9 @@
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
+    },
+    "phpstan/phpdoc-parser": {
+        "version": "1.4.5"
     },
     "psr/cache": {
         "version": "3.0.0"

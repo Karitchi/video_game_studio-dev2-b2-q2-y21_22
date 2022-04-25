@@ -60,6 +60,9 @@
       <path value="$PROJECT_DIR$/Web-App/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/Web-App/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/Web-App/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/Web-App/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/Web-App/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/Web-App/vendor/phpstan/phpdoc-parser" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
