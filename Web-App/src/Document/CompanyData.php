@@ -7,31 +7,30 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 /**
  * @MongoDB\Document
  */
-class User
+class CompanyData
 {
     /**
      * @MongoDB\Id
      */
     private $_id;
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    public $email;
 
     /**
      * @MongoDB\Field(type="string")
      */
-    private $password;
+    public $company_email;
 
     /**
      * @MongoDB\Field(type="string")
      */
-    private $role;
+    public $company_description;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="collection")
      */
-    public function get_user(){
-        return $this->email;
-    }
+    public $links;
+
+    /**
+     * @MongoDB\Field(type="collection")
+     */
+    public $address;
 }

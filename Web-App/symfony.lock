@@ -54,12 +54,6 @@
     "jean85/pretty-package-versions": {
         "version": "2.0.5"
     },
-    "jms/metadata": {
-        "version": "2.6.1"
-    },
-    "jms/serializer": {
-        "version": "3.17.1"
-    },
     "laminas/laminas-code": {
         "version": "4.5.1"
     },
@@ -68,6 +62,15 @@
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
+    },
+    "phpdocumentor/reflection-common": {
+        "version": "2.2.0"
+    },
+    "phpdocumentor/reflection-docblock": {
+        "version": "5.3.0"
+    },
+    "phpdocumentor/type-resolver": {
+        "version": "1.6.1"
     },
     "phpstan/phpdoc-parser": {
         "version": "1.4.5"
@@ -83,6 +86,18 @@
     },
     "psr/log": {
         "version": "3.0.0"
+    },
+    "sensio/framework-extra-bundle": {
+        "version": "6.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.2",
+            "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
+        },
+        "files": [
+            "./config/packages/sensio_framework_extra.yaml"
+        ]
     },
     "symfony/asset": {
         "version": "v6.0.3"
@@ -196,6 +211,12 @@
     "symfony/polyfill-php81": {
         "version": "v1.25.0"
     },
+    "symfony/property-access": {
+        "version": "v6.0.8"
+    },
+    "symfony/property-info": {
+        "version": "v6.0.7"
+    },
     "symfony/routing": {
         "version": "6.0",
         "recipe": {
@@ -211,6 +232,9 @@
     },
     "symfony/runtime": {
         "version": "v6.0.5"
+    },
+    "symfony/serializer": {
+        "version": "v6.0.8"
     },
     "symfony/service-contracts": {
         "version": "v3.0.0"
@@ -270,5 +294,8 @@
     },
     "twig/twig": {
         "version": "v3.3.8"
+    },
+    "webmozart/assert": {
+        "version": "1.10.0"
     }
 }

@@ -7,31 +7,36 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 /**
  * @MongoDB\Document
  */
-class User
+class Jobs
 {
     /**
      * @MongoDB\Id
      */
     private $_id;
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    public $email;
 
     /**
      * @MongoDB\Field(type="string")
      */
-    private $password;
+    public $job_title;
 
     /**
      * @MongoDB\Field(type="string")
      */
-    private $role;
+    public $location;
 
     /**
      * @MongoDB\Field(type="string")
      */
-    public function get_user(){
-        return $this->email;
-    }
+    public $company_description;
+
+    /**
+     * @MongoDB\Field(type="hash")
+     */
+    public $skills_and_experience;
+
+    /**
+     * @MongoDB\Field(type="hash")
+     */
+    public $job_description;
+
 }
