@@ -9,3 +9,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+h1, h2, span, p{
+    margin: 0;
+}

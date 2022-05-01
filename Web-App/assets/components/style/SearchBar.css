@@ -1,0 +1,35 @@
+.content{
+    background-color: rgba(128, 128, 128, 0.33);
+}
+
+.search-bar-container{
+    background-color: yellowgreen;
+    width: 220px;
+    height: 30px;
+    margin: 25px calc(100% - 220px);
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar-container button{
+    border-radius: 0;
+    border: 1px black solid;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    margin: 0;
+}
+.search-bar-container button img{
+    width: 15px;
+    height: 15px;
+}
+
+.search-bar-container input{
+    height: 26px;
+    width: calc(100% - 30px);
+    border-radius: 0;
+    border: 1px black solid;
+    background-color: #2e3136;
+    color: white;
+    overflow: hidden;
+}
