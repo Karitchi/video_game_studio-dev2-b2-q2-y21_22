@@ -1,9 +1,10 @@
 .content{
+    min-width: 1000px;
     width: 60%;
-    min-height: calc(100vh - 50px - 120px);
+    min-height: calc(100vh - 50px - 90px);
     margin: 0 auto;
     overflow-wrap: break-word;
-    background-color: antiquewhite;
+    background-color: white;
 }
 .content h1{
     margin: 60px 0 10px;

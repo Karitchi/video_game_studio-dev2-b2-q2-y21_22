@@ -30,7 +30,6 @@ ReactDOM.render(
             <Route path="/forums" element={pageDisplay(<Forums />)} exact={true}/>
             <Route path="/contact" element={pageDisplay(<Contact />)} exact={true}/>
             {/* 404 route */}
-            <Route path="*" element={<PageNotFound />} />
         </Routes>
     </Router>,
     document.getElementById('root')
