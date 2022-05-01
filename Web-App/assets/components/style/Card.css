@@ -1,0 +1,58 @@
+.card{
+    width: 100%;
+    height: 200px;
+    background: #333;
+    color: #fff;
+    font-size: 13px;
+    margin: 20px 0 20px 0;
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+.content_card{
+    margin: 0 10% 0 10%;
+    vertical-align: middle;
+}
+
+.content_card h1{
+    margin: 10px 0 0 0;
+}
+
+.modal h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.modal h3{
+    font-size: 20px;
+    margin: 10px 0 0 0;
+}
+
+.contact{
+    margin: 20px 0 0 0;
+}
+
+.button_card {
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 5px auto 0 auto;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
