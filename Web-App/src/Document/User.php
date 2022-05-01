@@ -2,6 +2,7 @@
 
 namespace App\Document;
 
+use Doctrine\ODM\MongoDB\DocumentManager;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
@@ -21,17 +22,10 @@ class User
     /**
      * @MongoDB\Field(type="string")
      */
-    private $password;
+    public $password;
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    private $role;
-
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    public function get_user(){
-        return $this->email;
+    public function pwsd_check(DocumentManager $dm, $email_in, $pwsd_in){
+        $repository = $dm->getRepository(User::class)->findBy(['email' => 'admin.email.com']);
+        return json_decode($repository);
     }
 }

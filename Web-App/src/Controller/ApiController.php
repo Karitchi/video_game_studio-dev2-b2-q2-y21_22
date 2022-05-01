@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -25,7 +26,14 @@ class ApiController extends AbstractController
 
         $user_normalizer = $serializer->serialize($users, 'json');
 
-        dd($user_normalizer);
+        $json_decode = json_decode($user_normalizer);
+
+        $repository = $dm->getRepository(User::class)->findBy(['email' => 'admin.email.com']);
+        dd( $repository);
+
+        //return $userr->pwsd_check($dm, $email_in='admin.email.com', $pwsd_in='pwsd');
+
+        //return new JsonResponse($json_decode);
     }
 
     /**
