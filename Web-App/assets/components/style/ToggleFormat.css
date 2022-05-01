@@ -1,0 +1,56 @@
+.toggleCheckbox {
+    display: none;
+  }
+
+
+  .toggleContainer {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid #111111;
+    border-radius: 0px;
+    background: white;
+    font-weight:bolder;
+    color: white;
+    cursor: pointer;
+ }
+
+ .toggleContainer::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    border-radius:0px;
+    background: #111111;
+    transition: all 0.3s;
+ }
+
+ .toggleContainer div {
+    padding: 6px;
+    text-align: center;
+    z-index: 1;
+ }
+
+ .toggleCheckbox:checked + .toggleContainer::before {
+    left: 50%;
+ }
+
+ .toggleCheckbox:checked + .toggleContainer div:first-child{
+    color: #111111;
+    transition: color 0.3s;
+ }
+ .toggleCheckbox:checked + .toggleContainer div:last-child{
+    color: white;
+    transition: color 0.3s;
+ }
+ .toggleCheckbox + .toggleContainer div:first-child{
+    color: white;
+    transition: color 0.3s;
+ }
+ .toggleCheckbox + .toggleContainer div:last-child{
+    color: #111111;
+    transition: color 0.3s;
+ }
+

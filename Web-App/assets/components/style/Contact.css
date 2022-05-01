@@ -1,0 +1,129 @@
+.div-container{
+    margin-top: 5%;
+}
+
+.toggle-button{
+    background-color: aqua;
+}
+
+.formular{
+    background-color: aquamarine;
+}
+
+.media{
+    background-color: blue;
+}
+
+.div-child{
+    margin-right: 2%;
+    width: 100%;
+    background-color: white;
+}
+
+.img_game{
+    width: 100%;
+    height: 823px;
+
+}
+
+input, select, textarea{
+    padding: 1%;
+    box-sizing: border-box;
+    margin-bottom: 2%;
+    width: 100%;
+    background-color: white;
+    border: 1px;
+    border-style:solid;
+}
+
+button{
+    background-color: #111111;
+    color: white;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border: solid #111111;
+    margin-left: 25%;
+    padding: 2%;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .img_game{
+        display: none;
+    }
+}
+
+/*grid*/
+.div-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "toggle-button" "formular media";
+    column-gap: 100px;
+    row-gap: 100px;
+}
+.form-container{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: center;
+}
+.div-child{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: center;
+}
+
+@media all and (min-width: 445px) and (max-width: 1000px) {
+    
+    .div-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 100px;
+        row-gap: 100px;
+    }
+    .form-container{
+        width: 90%;
+        margin: 0 auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-content: center;
+    }
+
+    label, input, select, textarea, button, p, strong{
+        font-size: 200%;
+        min-height: 6rem;
+        resize: vertical;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 5rem;
+        
+    }
+    .div-child{
+        width: 90%;
+        margin: 0 auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 700px){
+    .div-container{
+        width: 50%;
+        
+    }
+}
+
+
+/*end grid*/

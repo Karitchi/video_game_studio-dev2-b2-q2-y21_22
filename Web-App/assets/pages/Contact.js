@@ -1,11 +1,18 @@
 import React from 'react'
 import style from './style/PageFormat.css'
+import Form from "../components/Form";
+import Image from "../components/Image"
 
 const Contact = () => {
     return (
-        <div className='content'>
-
+        <div>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+            <Image />
+            <div className='content'>
+                <Form />
+            </div>
         </div>
+
     )
 }
 
