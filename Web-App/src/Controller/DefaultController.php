@@ -3,13 +3,16 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
+
 
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/{reactRouting}", name="about", requirements={"reactRouting"="^(?!admin).+"}, defaults={"reactRouting": null})
+     * @Route("/{reactRouting}", name="about", requirements={"reactRouting"="^(?!admin)+(?!api).+"}, defaults={"reactRouting": null})
      */
     public function index(): Response
     {
@@ -17,6 +20,8 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+
     /**
      * @Route("/admin", name="admin")
      */
@@ -24,4 +29,5 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/admin.html.twig');
     }
+
 }
