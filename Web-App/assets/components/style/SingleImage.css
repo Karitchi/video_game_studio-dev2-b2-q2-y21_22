@@ -1,0 +1,13 @@
+.single-image-block{
+    width: 45%;
+    height: auto;
+}
+.left{
+    margin: 25px 0;
+}
+.center{
+    margin: 25px auto;
+}
+.right{
+    margin: 25px calc(100% - 45%)
+}
