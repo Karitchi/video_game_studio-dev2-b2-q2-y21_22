@@ -1,9 +1,11 @@
 import React from 'react'
 import Contact from '../components/style/Contact.css'
 import ToggleFormat from '../components/style/ToggleFormat.css'
+import $, { data } from "jquery";
 
 
 const Form = () => {
+
     return (
         <div className='div-container'>
             <div className="form-container">
@@ -44,14 +46,28 @@ const Form = () => {
                         <button type='submit'>Submit</button>
                     </form>
                 </div>
-
             </div>
-            <div className='div-child media'>
-                <strong>Connect with us on Social Media</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <p>Connect on Facebook</p>
-                <p>Connect on Twitter</p>
-                <p>Connect on Steam</p>
+
+            
+            <div className='div-child media' id='socialMedia'>
+                <big>Connect with us on social media.</big> <br></br><br></br>
+
+                <p>Vivamus nec sapien varius, pretium tortor eget, vestibulum purus. Donec scelerisque ut tortor et egestas. Fusce id porttitor velit. </p><br></br>
+                
+                <ul>
+                    <li> <a href='https://www.facebook.com/Silva-Gaming-111870081521113'>Connect with us on Facebook</a></li>
+                    <li><a href='https://www.facebook.com/Silva-Gaming-111870081521113'>Connect with us on Twitter</a></li>
+                    <li><a href='https://www.facebook.com/Silva-Gaming-111870081521113'>Connect with us on Steam</a></li>
+                </ul><br></br>
+                <p>If you'd like to mail us something, here's our PO BOX: </p> <br></br>
+                <ul>
+                    <li> Silva Gaming </li>
+                    <li> {datele.address.street}  {datele.address.no} </li>
+                    
+                    <li> {datele.address.city} </li>
+                </ul>
+                
+
             </div>
         </div>
 
@@ -61,3 +77,19 @@ const Form = () => {
 
 
 export default Form
+
+
+var dataRAW;
+var datele;
+
+$.ajax({
+    async: false,
+    url: "http://127.0.0.1:8000/api/company_data",
+    dataType: "json",
+    success: function getsJson (data){
+        dataRAW = JSON.parse(data);
+        datele = dataRAW[0]
+    }
+})
+    
+   console.log(datele);

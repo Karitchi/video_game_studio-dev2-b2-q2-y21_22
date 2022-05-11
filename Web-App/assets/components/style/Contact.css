@@ -26,6 +26,12 @@
 
 }
 
+.media{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 input, select, textarea{
     padding: 1%;
     box-sizing: border-box;
@@ -47,12 +53,16 @@ button{
     padding: 2%;
 }
 
+ul{
+    list-style: none;
+}
 
 @media only screen and (max-width: 1000px){
     .img_game{
         display: none;
     }
 }
+
 
 /*grid*/
 .div-container {
