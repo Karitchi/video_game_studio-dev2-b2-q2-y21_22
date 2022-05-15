@@ -30,13 +30,21 @@ function Card(props) {
                         <h3>Description:</h3>
                         <div>{props.description}</div>
                         <h3>Skills and Experiences:</h3>
-                        <div>{props.skills}</div>
+                        <div>
+                            {props.skills.map((skill, index) => {
+                                return (<ul key = {index}> {skill} </ul>)
+                            })}
+                        </div>
                         <h3>What You'll Be Doing:</h3>
-                        <div>{props.job}</div>
+                        <div>
+                            {props.job.map((job, index) => {
+                                return (<ul key={{index}}> {job} </ul>)
+                            })}
+                        </div>
                         <div className='contact'>{props.contact}</div>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
+                        <Button variant="light" onClick={handleClose}>
                             Close
                         </Button>
                     </Modal.Footer>
