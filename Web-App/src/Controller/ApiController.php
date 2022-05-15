@@ -7,11 +7,16 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+use Symfony\Flex\Response as FlexResponse;
+
 use App\Document\User;
 use App\Document\Jobs;
 use App\Document\CompanyData;
 use Doctrine\ODM\MongoDB\DocumentManager;
-
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
 
 class ApiController extends AbstractController
@@ -60,5 +65,33 @@ class ApiController extends AbstractController
         $cd_normalizer = $serializer->serialize($cd, 'json');
 
         return $this->json($cd_normalizer);
+    }
+
+
+    /**
+     * @Route("/contact", name="api_mail")
+     */
+    public function mailAPI(Request $request, MailerInterface $mailer)
+    {
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $name = $_POST["Name"];
+            $mail = $_POST["Mail"];
+            $game = $_POST["Game"];
+            $category = $_POST["Categ"];
+            $message = $_POST["Msg"];
+
+
+                $email = (new Email())
+                ->from($mail)
+                ->to('gb_nechifor@yahoo.com')
+                ->subject('Testing mail tuto')
+                ->html('<p> It worked! </p>');
+        
+            $mailer->send($email);
+
+        }
+        return $this->render('default/index.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
     }
 }

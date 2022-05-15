@@ -18,7 +18,7 @@ const Form = () => {
                 </div>
 
                 <div className='div-child formular'>
-                    <form>
+                    <form method='post' action=''>
                         <label htmlFor="fname">Name</label>
                         <input name='Name' className='name' type="text" id="fname" required='true' >
 
