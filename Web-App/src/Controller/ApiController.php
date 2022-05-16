@@ -83,9 +83,10 @@ class ApiController extends AbstractController
 
                 $email = (new Email())
                 ->from($mail)
-                ->to('gb_nechifor@yahoo.com')
-                ->subject('Testing mail tuto')
-                ->html('<p> It worked! </p>');
+                ->to('silvagaming998@gmail.com')
+                ->subject('Testing the mail sender from symfony.')
+                ->text($message)
+                ->html('<p> This is a message </p>');
         
             $mailer->send($email);
 
