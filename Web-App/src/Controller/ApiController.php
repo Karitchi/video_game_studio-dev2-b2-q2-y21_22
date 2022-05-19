@@ -15,6 +15,7 @@ use Symfony\Flex\Response as FlexResponse;
 use App\Document\User;
 use App\Document\Jobs;
 use App\Document\CompanyData;
+use App\Document\Games;
 use Doctrine\ODM\MongoDB\DocumentManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -39,6 +40,19 @@ class ApiController extends AbstractController
         //return $userr->pwsd_check($dm, $email_in='admin.email.com', $pwsd_in='pwsd');
 
         //return new JsonResponse($json_decode);
+    }
+
+    /**
+     * @Route("/api/games", name="api_games", methods={"GET"})
+     */
+    public function getGames(DocumentManager $dm, SerializerInterface $serializer)
+    {
+        $repository = $dm->getRepository(Games::class);
+        $cd = $repository->findAll();
+
+        $cd_normalizer = $serializer->serialize($cd, 'json');
+
+        return $this->json($cd_normalizer);
     }
 
     /**
