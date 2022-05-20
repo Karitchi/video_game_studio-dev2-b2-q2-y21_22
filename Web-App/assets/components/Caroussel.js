@@ -13,7 +13,13 @@ function Carousel_career(props) {
             <h1>Current Job Openings:</h1>
 
             <Carousel interval={null}>
-
+                {props.dataJobs.map((i, index) => {
+                    return(
+                        <Carousel.Item key ={`${index} - ${i}`}>
+                            <Card title={i.job_title} location={i.location} skills={i.skills_and_experience} contact={props.dataCompany.company_email} description={i.job_description} tasks={i.tasks}/>
+                        </Carousel.Item>);
+                })
+                }
             </Carousel>
         </div>
     )

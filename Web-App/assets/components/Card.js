@@ -16,7 +16,7 @@ function Card(props) {
                 <h1>{props.title}</h1>
                 <div>Location : {props.location}</div>
                 <div>{props.description}</div>
-                <button className="button_card" onClick={handleShow}>More info</button>
+                <Button className="button_card" variant="light"  onClick={handleShow} size="sm">More infos</Button>
             </div>
 
             <div className='modal' onClick={e => e.stopPropagation()}>
@@ -32,19 +32,19 @@ function Card(props) {
                         <h3>Skills and Experiences:</h3>
                         <div>
                             {props.skills.map((skill, index) => {
-                                return (<ul key = {index}> {skill} </ul>)
+                                return (<ul key = {`${index} - ${skill}`}> {skill} </ul>)
                             })}
                         </div>
                         <h3>What You'll Be Doing:</h3>
                         <div>
-                            {props.job.map((job, index) => {
-                                return (<ul key={{index}}> {job} </ul>)
+                            {props.tasks.map((job, index) => {
+                                return (<ul key={`${index} - ${job}`}> {job} </ul>)
                             })}
                         </div>
                         <div className='contact'>{props.contact}</div>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="light" onClick={handleClose}>
+                        <Button variant="secondary" onClick={handleClose}>
                             Close
                         </Button>
                     </Modal.Footer>
