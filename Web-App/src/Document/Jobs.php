@@ -24,10 +24,6 @@ class Jobs
      */
     public $location;
 
-    /**
-     * @MongoDB\Field(type="string")
-     */
-    public $company_description;
 
     /**
      * @MongoDB\Field(type="hash")
@@ -36,6 +32,11 @@ class Jobs
 
     /**
      * @MongoDB\Field(type="hash")
+     */
+    public $tasks;
+
+    /**
+     * @MongoDB\Field(type="string")
      */
     public $job_description;
 
