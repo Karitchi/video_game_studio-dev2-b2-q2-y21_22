@@ -34,6 +34,8 @@ class ApiController extends AbstractController
      */
     public function getUsers(DocumentManager $dm, SerializerInterface $serializer,NormalizerInterface $normalizer, User $userr)
     {
+        header("Access-Control-Allow-Origin: *");
+
         $repository = $dm->getRepository(User::class);
         $users = $repository->findAll();
 
@@ -54,6 +56,8 @@ class ApiController extends AbstractController
      */
     public function getJobs(DocumentManager $dm, SerializerInterface $serializer)
     {
+        header("Access-Control-Allow-Origin: *");
+
         $repository = $dm->getRepository(Jobs::class);
         $jobs = $repository->findAll();
 
@@ -67,6 +71,8 @@ class ApiController extends AbstractController
      */
     public function getCompanyData(DocumentManager $dm, SerializerInterface $serializer)
     {
+        header("Access-Control-Allow-Origin: *");
+
         $repository = $dm->getRepository(CompanyData::class);
         $cd = $repository->findAll();
 
@@ -106,6 +112,8 @@ class ApiController extends AbstractController
      */
     public function getGames(DocumentManager $dm, SerializerInterface $serializer)
     {
+        header("Access-Control-Allow-Origin: *");
+
         $repository = $dm->getRepository(Games::class);
         $games = $repository->findAll();
 

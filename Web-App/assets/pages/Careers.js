@@ -28,7 +28,7 @@ function jsonParser(){
             arr.push(i);
         }
     })
-    $.getJSON('/api/company', data=>{
+    $.getJSON('/api/company_data', data=>{
         let myData = JSON.parse(data);
         for (let i of myData) {
             arr2.push(i);

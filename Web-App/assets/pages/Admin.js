@@ -6,19 +6,11 @@ import Login from "./Login";
 import About from "./About";
 
 const Admin = () => {
-    const [token, setToken] = useState(false);
-
-    if(!token){
-        return <Login setToken={setToken} />
-    }
-    else if (token){
         return (
             <div className='adminContainer'>
-                <h1>pppp</h1>
+
             </div>
         )
-    }
-
 }
 
 export default Admin
