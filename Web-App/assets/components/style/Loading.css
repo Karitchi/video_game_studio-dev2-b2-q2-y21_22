@@ -1,0 +1,16 @@
+.loading-container{
+    background-color: #cdcdcd;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin-top: -72px;
+}
+
+.loading-image{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: calc(50vh - 75px) calc(50% - 75px);
+}

@@ -4,7 +4,8 @@ import NavExpand from '../../src/img/icons/menu-open-icon.svg';
 import NavColapse from '../../src/img/icons/menu-close-icon.svg';
 import style from './style/Nav.css';
 import {Link} from 'react-router-dom';
-import $ from 'jquery';
+import $ from 'jquery'
+
 
 //to avoid toggle-nav menu staying open after resizing
 $(window).resize(()=>{
@@ -17,7 +18,7 @@ $(window).resize(()=>{
 const Nav = () => {
 
   return (
-      <header className="nav-bar">
+      <header className="nav-bar" id="nav-bar-id">
           <nav className="nav-content">
               <img className='logo' src={Logo} alt="" draggable="false"/>
               {navComponents('default-nav')}

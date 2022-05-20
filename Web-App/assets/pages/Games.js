@@ -1,19 +1,69 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import style from './style/PageFormat.css'
 import TextBox from "../components/TextBox";
 import GamesContainer from "../components/GamesContainer";
+import Loading from "../components/Loading";
+import $ from 'jquery'
 
 const Games = (props) => {
-    return (
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [data, setData] = useState([]);
+
+    useEffect(()=>{
+     fetch("http://127.0.0.1:8000/api/games")
+         .then(res => res.json())
+         .then(
+             (result) => {
+                 setIsLoaded(true);
+                 setData(result);
+             },
+             (error) => {
+                 setIsLoaded(true);
+                 setError(error);
+             }
+         )
+         .catch(error => {
+             console.log(error)
+         })
+    },[])
+
+    if (error) {
+        console.log(error.message)
+    }
+    else if (!isLoaded){
+        console.log("Loading ...")
+
+        return (
+            <Loading />
+        )
+    }
+    else {
+        console.log(data);
+        return (
+            <div className='content'>
+                <TextBox textBoxContent={arr}/>
+                <GamesContainer name={'games'} games={arrGames}/>
+                <GamesContainer name={'projects'} games={arrProjects}/>
+            </div>
+        )
+    }
+
+
+
+}
+export default Games
+
+function contentFormat(){
+    return(
         <div className='content'>
             <TextBox textBoxContent={arr}/>
             <GamesContainer name={'games'} games={arrGames}/>
             <GamesContainer name={'projects'} games={arrProjects}/>
         </div>
     )
-}
-export default Games
 
+}
 
 const arr = [
     {name: 'title', content: 'Title'},

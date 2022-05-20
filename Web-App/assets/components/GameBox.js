@@ -7,7 +7,7 @@ import {func} from "prop-types";
 
 const GamesContainer = (props) => {
     return (
-        <Link className="game-box" to={'/' + props.name +'/' + props.obj.link}>
+        <Link className="game-box" to={'/' + props.name +'?name=' + props.obj.link}>
             <h1>{props.obj.name}</h1>
             <img src={props.obj.coverImg} alt='' className='tttttttt' draggable='false'/>
             <p className="redirect">See game</p>

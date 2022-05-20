@@ -2,10 +2,13 @@
 
 namespace App\Controller;
 
+use phpDocumentor\Reflection\Types\This;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\Persistence\ObjectManager;
 
 
 use Symfony\Component\Mailer\MailerInterface;
@@ -17,15 +20,22 @@ use App\Document\Jobs;
 use App\Document\CompanyData;
 use App\Document\Games;
 use Doctrine\ODM\MongoDB\DocumentManager;
+<<<<<<< Updated upstream
 use Symfony\Component\HttpFoundation\Request;
+=======
+
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+>>>>>>> Stashed changes
 use Symfony\Component\Serializer\SerializerInterface;
 
 class ApiController extends AbstractController
 {
+    public bool $loggerState = false;
+
     /**
-     * @Route("/api/users", name="api_users", methods={"GET"})
+     * @Route("/api/users", name="api_users", methods={"POST"})
      */
-    public function getUsers(DocumentManager $dm, SerializerInterface $serializer, User $userr)
+    public function getUsers(DocumentManager $dm, SerializerInterface $serializer,NormalizerInterface $normalizer, User $userr)
     {
         $repository = $dm->getRepository(User::class);
         $users = $repository->findAll();
@@ -34,12 +44,12 @@ class ApiController extends AbstractController
 
         $json_decode = json_decode($user_normalizer);
 
-        $repository = $dm->getRepository(User::class)->findBy(['email' => 'admin.email.com']);
-        dd( $repository);
+        $ss = $userr->pwsd_check($dm, $normalizer, $email='admin.email.com', $pwsd='pwsd');
 
-        //return $userr->pwsd_check($dm, $email_in='admin.email.com', $pwsd_in='pwsd');
+        //$dd = password_hash($ss, PASSWORD_BCRYPT);
+        //post insted of get for forms
 
-        //return new JsonResponse($json_decode);
+        dd($ss);
     }
 
     /**
@@ -79,8 +89,10 @@ class ApiController extends AbstractController
         $cd_normalizer = $serializer->serialize($cd, 'json');
 
         return $this->json($cd_normalizer);
+
     }
 
+<<<<<<< Updated upstream
 
     /**
      * @Route("/contact", name="api_mail")
@@ -105,8 +117,81 @@ class ApiController extends AbstractController
             $mailer->send($email);
 
         }
+=======
+    /**
+     * @Route("/api/games", name="api_games", methods={"GET"})
+     */
+    public function getGames(DocumentManager $dm, SerializerInterface $serializer)
+    {
+        $repository = $dm->getRepository(Games::class);
+        $games = $repository->findAll();
+
+        $games_normalizer = $serializer->serialize($games, 'json');
+
+        return $this->json($games_normalizer);
+
+    }
+
+    /**
+     * @Route("/api/logger_state", name="api_logger_state", methods={"GET"})
+     */
+    public function getLoginState(SerializerInterface $serializer){
+        if ($this->loggerState === false){
+            setcookie('logstate', 'false', time() + 86400, '/admin');
+            return $this->json('{"logstate": "invalid"}');
+        }
+        elseif ($this->loggerState === true){
+            setcookie('logstate', 'true', time() + 86400, '/admin');
+            return $this->json('{"logstate": "valid"}');
+        }
+    }
+
+    /**
+     * @Route("/admin", name="api_logger")
+     */
+    public function getUserForm(Request $request, SerializerInterface $serializer, NormalizerInterface $normalizer, DocumentManager $dm, User $userr){
+        $this->getLoginState($serializer);
+
+        setcookie('emptyUsername', 'false');
+        setcookie('logingError', 'false');
+        setcookie('emptyPassword', 'false');
+
+        $repository = $dm->getRepository(User::class);
+        $users = $repository->findAll();
+
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            if (empty($username) or empty($password)){
+                if (empty($username)) {
+                    setcookie('emptyUsername', 'true');
+                }
+                if (empty($password)) {
+                    setcookie('emptyPassword', 'true');
+                }
+            }
+            else {
+                $userValidate = $userr->pwsd_check($dm, $normalizer, $email=$username, $pwsd=$password);
+
+                if (!$userValidate) {
+                    setcookie('logingError', 'true');
+                }
+                else{
+                    $this->loggerState = true;
+                    $this->getLoginState($serializer);
+                }
+            }
+        }
+
+>>>>>>> Stashed changes
         return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 }

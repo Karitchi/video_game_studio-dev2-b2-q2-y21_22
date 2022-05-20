@@ -12,22 +12,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/{reactRouting}", name="about", requirements={"reactRouting"="^(?!admin)+(?!api).+"}, defaults={"reactRouting": null})
+     * @Route("/{reactRouting}", name="about", requirements={"reactRouting"="^(?!api).+"}, defaults={"reactRouting": null})
      */
     public function index(): Response
     {
+        //setcookie('testval', 'test from server');
         return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
-    }
 
-
-    /**
-     * @Route("/admin", name="admin")
-     */
-    public function admin(): Response
-    {
-        return $this->render('default/admin.html.twig');
     }
 
 }

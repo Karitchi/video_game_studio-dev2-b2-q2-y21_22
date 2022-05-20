@@ -11,8 +11,10 @@ import Forums from "./pages/Forums";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
 import SelectedGame from "./pages/SelectedGame";
+import Admin from "./pages/Admin";
 import './styles/responsive.css';
 import $ from 'jquery';
+import Login from "./pages/Login";
 
 const arrGames = [
     {
@@ -69,49 +71,32 @@ const arrGames = [
 
     }
 ]
-const arrProjects = [
-    {
-        name: 'Dead Cells',
-        id: 0,
-        coverImg: 'https://picsum.photos/300/200',
-        url: 'deadcells',
-        page: [
-            {
-                component: 'text_box',
-                elements: [
-                    {name: 'title',  text: 'About Hollow Knight'},
-                    {name: 'text', text: 'Vivamus nec sapien varius, pretium tortor eget, vestibulum purus. Donec scelerisque ut tortor et egestas. Fusce id porttitor velit. Suspendisse accumsan, velit sed pellentesque varius, est enim suscipit lectus, quis varius ipsum erat ut nulla. Ut eu tincidunt enim, et aliquam mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed rutrum arcu pellentesque suscipit convallis.'}
-                ]
-            },
-            {
-                component: 'image_gallery',
-                elements: [
-                    'https://picsum.photos/300/200',
-                    'https://picsum.photos/300/200',
-                    'https://picsum.photos/300/200',
-                    'https://picsum.photos/300/200',
-                    'https://picsum.photos/300/200'
-                ]
-            }
-        ]
-    }
-]
+const arrProjects = []
+
+function pageDisplay(page) {
+    return <div>
+        <Nav />
+        {page}
+        <Footer />
+    </div>
+}
 
 ReactDOM.render(
     <Router>
         <Routes>
+            <Route path="/admin" element={<Admin />} exact={true}/>
             <Route path="/" element={pageDisplay(<About />)} exact={true}/>
             <Route path="/games" element={pageDisplay(<Games />)} exact={true}/>
             {arrGames.map(route=>
                 <React.Fragment key={route.id}>
                     <Route
-                        path={'games/'+route.url}
+                        path={'games?name='+route.url}
                         key={route.id}
                         element={pageDisplay(<SelectedGame />)}
                         exact={true}
                     />
                     <Route
-                        path={'forums/'+route.url}
+                        path={'forums?name='+route.url}
                         key={route.id}
                         element={pageDisplay(<SelectedGame />)}
                         exact={true}
@@ -143,10 +128,3 @@ ReactDOM.render(
     </Router>,
     document.getElementById('root')
 );
-function pageDisplay(page) {
-    return <div>
-        <Nav />
-        {page}
-        <Footer />
-    </div>
-}
