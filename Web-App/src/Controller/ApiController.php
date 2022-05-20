@@ -20,12 +20,9 @@ use App\Document\Jobs;
 use App\Document\CompanyData;
 use App\Document\Games;
 use Doctrine\ODM\MongoDB\DocumentManager;
-<<<<<<< Updated upstream
-use Symfony\Component\HttpFoundation\Request;
-=======
 
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
->>>>>>> Stashed changes
+
 use Symfony\Component\Serializer\SerializerInterface;
 
 class ApiController extends AbstractController
@@ -50,19 +47,6 @@ class ApiController extends AbstractController
         //post insted of get for forms
 
         dd($ss);
-    }
-
-    /**
-     * @Route("/api/games", name="api_games", methods={"GET"})
-     */
-    public function getGames(DocumentManager $dm, SerializerInterface $serializer)
-    {
-        $repository = $dm->getRepository(Games::class);
-        $cd = $repository->findAll();
-
-        $cd_normalizer = $serializer->serialize($cd, 'json');
-
-        return $this->json($cd_normalizer);
     }
 
     /**
@@ -92,14 +76,12 @@ class ApiController extends AbstractController
 
     }
 
-<<<<<<< Updated upstream
-
     /**
      * @Route("/contact", name="api_mail")
      */
     public function mailAPI(Request $request, MailerInterface $mailer)
     {
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $name = $_POST["Name"];
             $mail = $_POST["Mail"];
             $game = $_POST["Game"];
@@ -107,17 +89,18 @@ class ApiController extends AbstractController
             $message = $_POST["Msg"];
 
 
-                $email = (new Email())
+            $email = (new Email())
                 ->from($mail)
                 ->to('silvagaming998@gmail.com')
                 ->subject('Testing the mail sender from symfony.')
                 ->text($message)
                 ->html('<p> This is a message </p>');
-        
+
             $mailer->send($email);
 
         }
-=======
+    }
+
     /**
      * @Route("/api/games", name="api_games", methods={"GET"})
      */
@@ -149,7 +132,8 @@ class ApiController extends AbstractController
     /**
      * @Route("/admin", name="api_logger")
      */
-    public function getUserForm(Request $request, SerializerInterface $serializer, NormalizerInterface $normalizer, DocumentManager $dm, User $userr){
+    public function getUserForm(Request $request, SerializerInterface $serializer, NormalizerInterface $normalizer, DocumentManager $dm, User $userr)
+    {
         $this->getLoginState($serializer);
 
         setcookie('emptyUsername', 'false');
@@ -164,34 +148,28 @@ class ApiController extends AbstractController
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            if (empty($username) or empty($password)){
+            if (empty($username) or empty($password)) {
                 if (empty($username)) {
                     setcookie('emptyUsername', 'true');
                 }
                 if (empty($password)) {
                     setcookie('emptyPassword', 'true');
                 }
-            }
-            else {
-                $userValidate = $userr->pwsd_check($dm, $normalizer, $email=$username, $pwsd=$password);
+            } else {
+                $userValidate = $userr->pwsd_check($dm, $normalizer, $email = $username, $pwsd = $password);
 
                 if (!$userValidate) {
                     setcookie('logingError', 'true');
-                }
-                else{
+                } else {
                     $this->loggerState = true;
                     $this->getLoginState($serializer);
                 }
             }
         }
 
->>>>>>> Stashed changes
         return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 }

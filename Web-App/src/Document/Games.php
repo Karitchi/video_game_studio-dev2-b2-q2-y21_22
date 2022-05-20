@@ -30,7 +30,7 @@ class Games
     public $status;
 
     /**
-     * @MongoDB\Field(type="collection")
+     * @MongoDB\Field(type="hash")
      */
     public $page;
 }
