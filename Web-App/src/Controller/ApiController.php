@@ -105,6 +105,9 @@ class ApiController extends AbstractController
             $mailer->send($email);
 
         }
+        return $this->render('default/index.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
     }
 
     /**
