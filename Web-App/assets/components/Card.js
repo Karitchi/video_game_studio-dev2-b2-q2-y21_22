@@ -37,9 +37,7 @@ function Card(props) {
                         </div>
                         <h3>What You'll Be Doing:</h3>
                         <div>
-                            {props.job.map((job, index) => {
-                                return (<ul key={{index}}> {job} </ul>)
-                            })}
+
                         </div>
                         <div className='contact'>{props.contact}</div>
                     </Modal.Body>

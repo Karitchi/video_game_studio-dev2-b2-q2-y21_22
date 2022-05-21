@@ -1,0 +1,80 @@
+.container{
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+
+}
+
+.featured_games, .upcoming_projects{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: auto;
+    
+
+}
+
+.upcoming_projects1{
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+
+
+.games{
+    position: relative;
+    justify-content: left;
+}
+
+.game__img{
+    display: inline-block;
+    width: 100%;
+}
+
+.game__overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.game__overlay:hover{
+    opacity: 1;
+}
+
+.game__overlay:hover > *{
+    transform: translateY(0);
+}
+.game__overlay > *{
+    transform: translateY(100%);
+    transition: transform 0.25s;
+}
+.game__title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.game_description{
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+
+.game__img, .game__overlay, .game__title, .game_description{
+    min-width: 360px;
+    padding-right: 10px;
+    align-self: baseline;
+}
+
+

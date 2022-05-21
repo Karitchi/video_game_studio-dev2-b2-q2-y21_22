@@ -92,4 +92,3 @@ $.ajax({
     }
 })
     
-   console.log(datele);
