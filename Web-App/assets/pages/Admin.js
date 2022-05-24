@@ -1,16 +1,22 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import style from './style/PageFormat.css'
-import $ from 'jquery'
-import Cookies from "core-js/internals/task";
-import Login from "./Login";
-import About from "./About";
+import Nav from "../components/Nav";
+import Featured from "../components/AdminFeaturedGames";
+import Games from "../components/AdminGames";
+import Upcoming from "../components/AdminUpcoming";
 
 const Admin = () => {
-        return (
+    return (
+        <div>
             <div className='adminContainer'>
-
+                <Nav />
+                <Games />
+                <Featured />
+                <Upcoming />
             </div>
-        )
+        </div>
+
+    )
 }
 
 export default Admin

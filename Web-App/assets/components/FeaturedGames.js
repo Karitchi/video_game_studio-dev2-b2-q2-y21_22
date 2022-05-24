@@ -1,7 +1,7 @@
 import React from 'react'
 import $, { data } from "jquery"
 import GameImage from "./style/GameImage.css"
-import ScrollBar from "./style/ScrollBar.css";
+
 const Featured_Games = () => {
     return (
         <div className='container'>

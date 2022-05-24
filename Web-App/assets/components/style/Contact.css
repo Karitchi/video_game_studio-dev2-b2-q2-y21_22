@@ -32,7 +32,7 @@
     text-align: center;
 }
 
-input, select, textarea{
+.input, .select, .textarea{
     padding: 1%;
     box-sizing: border-box;
     margin-bottom: 2%;
@@ -42,7 +42,7 @@ input, select, textarea{
     border-style:solid;
 }
 
-button{
+.submitButton{
     background-color: #111111;
     color: white;
     width: 50%;

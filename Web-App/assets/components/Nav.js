@@ -47,11 +47,9 @@ function navComponents(name){
                 <Link className={"nav-link"} to={"/careers"}> Careers </Link>
             </li>
             <li>
-                <Link className={"nav-link"} to={"/forums"}> Forums </Link>
-            </li>
-            <li>
                 <Link className={"nav-link"} to={"/contact"}> Contact </Link>
             </li>
+            
         </ul>
     )
 }

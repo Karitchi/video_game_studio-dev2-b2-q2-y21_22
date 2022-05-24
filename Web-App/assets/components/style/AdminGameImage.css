@@ -1,0 +1,32 @@
+
+
+.game_displayed{
+    position: relative;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.game_name{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    vertical-align:middle;
+    transform: translate(-50%, -50%);
+}
+
+.adminButton{
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.add{
+    background-color: grey;
+    max-height: 233.33px;
+}

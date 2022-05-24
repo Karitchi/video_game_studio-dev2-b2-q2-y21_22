@@ -12,8 +12,6 @@
     box-sizing: border-box;
     overflow-y: hidden;
     overflow-x: auto;
-    
-
 }
 
 .upcoming_projects1{
@@ -74,7 +72,6 @@
 .game__img, .game__overlay, .game__title, .game_description{
     min-width: 360px;
     padding-right: 10px;
-    align-self: baseline;
 }
 
 
