@@ -14,7 +14,7 @@ function Careers(props){
         <div className='content'>
             <Presentation_img />
             <Presentation_career />
-            <Carousel_career dataJobs={arr} dataCompany={{arr2}}/>
+            <Carousel_career dataJobs={arr} dataCompany={arr2}/>
         </div>
     )
 }

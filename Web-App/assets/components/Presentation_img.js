@@ -4,9 +4,7 @@ import './style/Presentation_img.css'
 
 function Presentation_img() {
     return(
-        <div className='image_presentation'>
-            <img src={hyper} alt="Hyper Light Drifter game" />
-        </div>
+        <img src={hyper} alt="Hyper Light Drifter game" />
     )
 }
 

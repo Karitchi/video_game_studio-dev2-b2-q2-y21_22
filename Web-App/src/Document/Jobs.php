@@ -37,6 +37,12 @@ class Jobs
     /**
      * @MongoDB\Field(type="hash")
      */
+    public $tasks;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
     public $job_description;
+
 
 }

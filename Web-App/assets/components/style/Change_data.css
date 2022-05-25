@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+.cDataLinks{
+    flex: 1 1 500px;
+    margin: 2% 2% 2% 2%;
+}
+.cDataEmail{
+    flex: 1 1 500px;
+    margin: 2% 2% 2% 2%;
+}
+.cDataAddress{
+    flex: 1 1 500px;
+    margin: 2% 2% 2% 2%;
+}
+
+.cDataButton{
+    flex: 1 1 500px;
+    margin: 2% 2% 2% 2%;
+}

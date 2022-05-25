@@ -16,7 +16,7 @@ function Card(props) {
                 <h1>{props.title}</h1>
                 <div>Location : {props.location}</div>
                 <div>{props.description}</div>
-                <button className="button_card" onClick={handleShow}>More info</button>
+                <Button variant="light" className="button_card" onClick={handleShow}>More info</Button>
             </div>
 
             <div className='modal' onClick={e => e.stopPropagation()}>
@@ -37,7 +37,9 @@ function Card(props) {
                         </div>
                         <h3>What You'll Be Doing:</h3>
                         <div>
-
+                            {props.tasks.map((task, index) => {
+                                return (<ul key = {index}> {task} </ul>)
+                            })}
                         </div>
                         <div className='contact'>{props.contact}</div>
                     </Modal.Body>
