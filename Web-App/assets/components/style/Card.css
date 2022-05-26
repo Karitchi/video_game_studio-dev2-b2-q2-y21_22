@@ -46,7 +46,8 @@
 
 .buttons_admin{
     display: flex;
-    margin: 1em auto 2em;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .card_admin{
@@ -60,5 +61,6 @@
 
 .card_admin_button{
     display: inline-flex;
-    margin-right: 20%;
+    margin-right: auto;
+    margin-left: auto;
 }
